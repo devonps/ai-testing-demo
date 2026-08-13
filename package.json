@@ -1,0 +1,44 @@
+{
+  "name": "demo-test-automation",
+  "version": "0.1.0",
+  "private": true,
+  "description": "UI test automation framework for KanFlow (Gherkin + Playwright)",
+  "type": "commonjs",
+  "scripts": {
+    "test": "cucumber-js",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "typecheck": "tsc --noEmit",
+    "prepare": "husky"
+  },
+  "engines": {
+    "node": ">=20 <21"
+  },
+  "devDependencies": {
+    "@cucumber/cucumber": "^11.0.0",
+    "@eslint/js": "^9.0.0",
+    "@playwright/test": "^1.48.0",
+    "@types/node": "^20.0.0",
+    "dotenv": "^16.0.0",
+    "eslint": "^9.0.0",
+    "eslint-config-prettier": "^9.0.0",
+    "husky": "^9.0.0",
+    "lint-staged": "^15.0.0",
+    "playwright": "^1.48.0",
+    "prettier": "^3.0.0",
+    "ts-node": "^10.9.0",
+    "typescript": "^5.5.0",
+    "typescript-eslint": "^8.0.0"
+  },
+  "lint-staged": {
+    "*.ts": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "*.{json,md,yml,yaml}": [
+      "prettier --write"
+    ]
+  }
+}
